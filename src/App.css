@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+  background-image: url("//links.papareact.com/55n");
+  background-size: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10em;
+  color: white;
+}
+
+.button {
+  margin-left: 5px;
+  background-color: #fe27ff;
+  color: white;
+  width: 250px;
+  font-family: Cascadia Code;
+  padding: 40px;
+  border: 5px solid #15f4ee;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: 1.5s;
+}
+
+.button:hover {
+  box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+}
