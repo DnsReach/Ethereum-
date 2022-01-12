@@ -24,6 +24,7 @@ const Message = () => {
                     style={{
                         width: '40px',
                     }}
+                    alt="Avatar"
                 />
             </>
         )
