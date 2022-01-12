@@ -1,34 +1,67 @@
-import React, { useRef } from "react";
-import SendMessage from "./Send";
-import { useMoralisQuery, useMoralis } from "react-moralis";
+import React, { useRef } from 'react'
+import SendMessage from './Send'
+import { useMoralisQuery, useMoralis, useNativeBalance } from 'react-moralis'
+import Image from './kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c4409623.4643918115297806762646.png'
 
 const Message = () => {
-  const EndOfMessage = useRef(null);
-  const { user } = useMoralis();
-  const { data } = useMoralisQuery(
-    "Messages",
-    (query) => query.ascending("createdAt").greaterThan(),
-    [],
-    {
-      live: true,
-    }
-  );
+    
+    const EndOfMessage = useRef(null)
+    const { user } = useMoralis()
+    const { data } = useMoralisQuery(
+        'Messages',
+        (query) => query.ascending('createdAt').greaterThan(),
+        [],
+        {
+            live: true,
+        }
+    )
 
-  return (
-    <>
-      <SendMessage EndOfMessage={EndOfMessage} />
-      {data.map((messages) => {
+    const HumanSex = ({ props }) => {
         return (
-          <div>
-            <h2 key={messages.id}>
-              {messages.get("message")} --- {user.getUsername()}
-            </h2>
-          </div>
-        );
-      })}
-      <div ref={EndOfMessage}>You're here</div>
-    </>
-  );
-};
+            <>
+                <img
+                    src={`https://avatars.dicebear.com/api/pixel-art/${
+                        props || user.get('username')
+                    }.svg`}
+                    style={{
+                        width: '40px',
+                    }}
+                />
+            </>
+        )
+    }
 
-export default Message;
+    return (
+        <>
+            {data.map((messages) => {
+                return (
+                    <>
+                        <p
+                            key={messages.id}
+                            style={{
+                                fontSize: '15px',
+                                color: 'yellow',
+                            }}
+                        >
+                            <HumanSex props={messages.get('username')} />
+                            {messages.get('username')}
+
+                            <p
+                                style={{
+                                    color: 'white',
+                                    marginBottom: '4em',
+                                }}
+                            >
+                                {messages.get('message')}
+                            </p>
+                        </p>
+                    </>
+                )
+            })}
+            <SendMessage EndOfMessage={EndOfMessage} />
+            <div ref={EndOfMessage}></div>
+        </>
+    )
+}
+
+export default Message

@@ -1,30 +1,66 @@
 body {
-  background-color: black;
-  background-image: url("//links.papareact.com/55n");
-  background-size: 100%;
+    background-color: black;
+    background-image: url('/home/dns/Ethereum-/src/Cosmic Wallpapers Top Cosmic Backgrounds WallpaperAccess.jpg');
+    background-size: 100%;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10em;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    color: white;
 }
 
 .button {
-  margin-left: 5px;
-  background-color: #fe27ff;
-  color: white;
-  width: 250px;
-  font-family: Cascadia Code;
-  padding: 40px;
-  border: 5px solid #15f4ee;
-  text-transform: uppercase;
-  border-radius: 100px;
-  transition: 1.5s;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: white;
+    width: 250px;
+    font-family: Cascadia Code;
+    padding: 40px;
+    border: 5px solid #15f4ee;
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: 1.5s;
 }
 
 .button:hover {
-  box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+    box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+}
+
+.header-metaverse {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.component-container {
+    margin-top: 60px;
+    text-align: center;
+    margin-right: 20px;
+    color: white;
+}
+
+.container-user {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.button-logout {
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+
+.button-logout:hover {
+    color: #fff;
 }

@@ -1,30 +1,21 @@
-import React, { useState } from "react";
-import { useMoralis } from "react-moralis";
+import React, { useState } from 'react'
+import { useMoralis, useNativeBalance } from 'react-moralis'
 
 const User = () => {
-  const { user, setUserData } = useMoralis();
-  const [state, setState] = useState("");
+    const { user, setUserData } = useMoralis()
+    const { data: balance } = useNativeBalance()
 
-  return (
-    <>
-      <div>WELCOME TO THE METAVERSE</div>
-      <input
-        onChange={(evu) => {
-          setState(evu.target.value);
-        }}
-      />
-      <button
-        onClick={() =>
-          setUserData({
-            username: state,
-          })
-        }
-      >
-        Click
-      </button>
-      <h2>USER: {user.get("username")}</h2>
-    </>
-  );
-};
+    return (
+        <>
+            <div className="welcome">
+                <h2>
+                    WELCOME TO THE METAVERSE --- {user.get('username')}{' '}
+                    {balance.formatted}
+                </h2>
+                <p>Adress: {user.get('ethAddress')}</p>
+            </div>
+        </>
+    )
+}
 
-export default User;
+export default User
