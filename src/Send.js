@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useMoralis, useNativeBalance } from 'react-moralis'
+import { useMoralis } from 'react-moralis'
 
-import './Eth.css'
+import './css-setup/Eth.css'
 
 const SendMessage = ({ EndOfMessage }) => {
     const { user, Moralis } = useMoralis()
@@ -25,7 +25,6 @@ const SendMessage = ({ EndOfMessage }) => {
             behavior: 'smooth',
         })
     }
-    const { data: balance } = useNativeBalance()
     return (
         <form
             style={{

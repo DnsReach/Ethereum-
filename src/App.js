@@ -3,9 +3,8 @@ import { useMoralis } from 'react-moralis'
 import Signup from './components/signup'
 import Message from './Messages'
 import User from './components/User'
-import Balance from './components/Balance'
 
-import './App.css'
+import './css-setup/App.css'
 
 const App = () => {
     const { authenticate, isAuthenticated, logout, setUserData } = useMoralis()

@@ -1,10 +1,8 @@
 import React, { useRef } from 'react'
 import SendMessage from './Send'
-import { useMoralisQuery, useMoralis, useNativeBalance } from 'react-moralis'
-import Image from './kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c4409623.4643918115297806762646.png'
+import { useMoralisQuery, useMoralis } from 'react-moralis'
 
 const Message = () => {
-    
     const EndOfMessage = useRef(null)
     const { user } = useMoralis()
     const { data } = useMoralisQuery(
@@ -45,7 +43,6 @@ const Message = () => {
                         >
                             <HumanSex props={messages.get('username')} />
                             {messages.get('username')}
-
                             <p
                                 style={{
                                     color: 'white',

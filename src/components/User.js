@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useMoralis, useNativeBalance } from 'react-moralis'
 
 const User = () => {
-    const { user, setUserData } = useMoralis()
+    const { user } = useMoralis()
     const { data: balance } = useNativeBalance()
 
     return (
