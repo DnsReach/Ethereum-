@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis'
 
-import './css-setup/Eth.css'
+import '../css-setup/Eth.css'
 
 const SendMessage = ({ EndOfMessage }) => {
     const { user, Moralis } = useMoralis()

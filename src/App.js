@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis'
 import Signup from './components/signup'
-import Message from './Messages'
+import Message from './message/Messages'
 import User from './components/User'
 
 import './css-setup/App.css'
