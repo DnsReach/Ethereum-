@@ -1,5 +1,6 @@
 import React from 'react'
 import { useMoralis, useNativeBalance } from 'react-moralis'
+import '../css-setup/Welcome.css'
 
 const User = () => {
     const { user } = useMoralis()
@@ -12,7 +13,6 @@ const User = () => {
                     WELCOME TO THE METAVERSE --- {user.get('username')}{' '}
                     {balance.formatted}
                 </h2>
-                <p>Adress: {user.get('ethAddress')}</p>
             </div>
         </>
     )

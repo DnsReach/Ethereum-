@@ -1,6 +1,12 @@
 body {
-    background-color: black;
-    background-image: url('https://cdn.wallpapersafari.com/81/13/0rCalk.jpg');
+    background: linear-gradient(
+        to right,
+        #2e1e67,
+        #372078,
+        #342173,
+        #482b95,
+        #402689
+    );
     background-size: 100%;
 }
 
@@ -8,8 +14,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5em;
     color: white;
+    margin: auto;
+    justify-content: center;
+    padding-top: 50px;
 }
 
 .button {
@@ -32,35 +40,8 @@ body {
     box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
 }
 
-.header-metaverse {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    margin: auto;
-}
-
 .component-container {
-    margin-top: 60px;
     text-align: center;
-    margin-right: 20px;
     color: white;
-}
-
-.container-user {
-    display: flex;
-    flex-direction: row;
     margin: auto;
-    justify-content: space-between;
-}
-
-.button-logout {
-    padding: 10px 10px;
-    cursor: pointer;
-    transition: color 0.4s linear;
-}
-
-.button-logout:hover {
-    color: #fff;
 }

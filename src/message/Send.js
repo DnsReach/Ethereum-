@@ -31,7 +31,7 @@ const SendMessage = ({ EndOfMessage }) => {
                 width: '500px',
                 position: 'fixed',
                 bottom: '0em',
-                right: '22em',
+                right: '20em',
                 marginRight: '6em',
                 marginTop: '20px',
             }}
