@@ -1,4 +1,30 @@
 .welcome {
     color: white;
-    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background: url('https://cdn.wallpapersafari.com/81/13/0rCalk.jpg');
+    margin-top: -6.2em;
+    margin-left: 4em;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.button-logout {
+    margin: auto;
+    width: 100px;
+    margin-left: 7em;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.button-config {
+    margin: auto;
+    width: 100px;
+    margin-left: 20px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
 }

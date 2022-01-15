@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis'
 import Signup from './components/signup'
 import Message from './message/Messages'
 import User from './components/User'
-import Sidebar from './components/sidebar'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
+
 import './css-setup/App.css'
+
+const Global = createGlobalStyle`
+body{
+    background:url("https://cdn.wallpapersafari.com/81/13/0rCalk.jpg")
+} `
 
 const App = () => {
     const { authenticate, isAuthenticated } = useMoralis()
+    const [theme, setTheme] = useState({ mode: 'dark' })
 
     if (isAuthenticated) {
         return (
             <>
                 <User />
-                <Sidebar />
                 <nav className="component-container">
                     <Message />
                 </nav>
@@ -23,19 +29,22 @@ const App = () => {
 
     return (
         <>
-            <div className="App">
-                <h1
-                    style={{
-                        fontSize: 40,
-                    }}
-                >
-                    CONNECT TO THE METAVERSE
-                </h1>
-                <button className="button" onClick={() => authenticate()}>
-                    Click
-                </button>
-                <Signup />
-            </div>
+            <ThemeProvider theme={theme}>
+                <Global />
+                <div className="App">
+                    <h1
+                        style={{
+                            fontSize: 40,
+                        }}
+                    >
+                        CONNECT TO THE METAVERSE
+                    </h1>
+                    <button className="button" onClick={() => authenticate()}>
+                        Click
+                    </button>
+                    <Signup />
+                </div>
+            </ThemeProvider>
         </>
     )
 }

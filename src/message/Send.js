@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis'
-
+import Sidebar from '../components/sidebar'
 import '../css-setup/Eth.css'
 
 const SendMessage = ({ EndOfMessage }) => {
     const { user, Moralis } = useMoralis()
     const [message, setMessages] = useState('')
+    const [state, setState] = useState(false)
 
     const GiveMessage = (ev) => {
         ev.preventDefault()
@@ -25,36 +26,41 @@ const SendMessage = ({ EndOfMessage }) => {
             behavior: 'smooth',
         })
     }
+
     return (
-        <form
-            style={{
-                width: '500px',
-                position: 'fixed',
-                bottom: '0em',
-                right: '20em',
-                marginRight: '6em',
-                marginTop: '20px',
-            }}
-            onSubmit={GiveMessage}
-        >
-            <input
-                className="input-message"
-                value={message}
-                onChange={(evento) => setMessages(evento.target.value)}
-            />
-            <button
+        <>
+            <form
                 style={{
-                    borderRadius: '0 25px 25px 0',
-                    width: '150px',
-                    height: '50px',
-                    background: 'transparent',
-                    color: 'white',
+                    width: '500px',
+                    position: 'fixed',
+                    bottom: '0em',
+                    right: '22em',
+                    marginRight: '6em',
+                    marginTop: '20px',
                 }}
-                type="submit"
+                onSubmit={GiveMessage}
             >
-                SEND
-            </button>
-        </form>
+                <input
+                    className="input-message"
+                    value={message}
+                    onChange={(evento) => setMessages(evento.target.value)}
+                />
+                <button
+                    style={{
+                        borderRadius: '0 25px 25px 0',
+                        width: '150px',
+                        height: '50px',
+                        background: 'transparent',
+                        color: 'white',
+                    }}
+                    type="submit"
+                >
+                    SEND
+                </button>
+                <button onClick={() => setState(!state)}>Click</button>
+                {state && <Sidebar />}
+            </form>
+        </>
     )
 }
 

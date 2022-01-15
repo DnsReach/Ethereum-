@@ -1,34 +1,17 @@
-import React from 'react'
-import { useMoralis } from 'react-moralis'
-import './css-sidebar/sidebar.css'
+import '../css-setup/Sidebar.css'
 
-const Sidebar = () => {
-    const { logout } = useMoralis()
+const sider = () => {
     return (
-        <>
-            <div className="container">
-                <p>wewe</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <p>weweeweeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-                <button onClick={() => logout()}>Click</button>
-            </div>
-        </>
+        <ul className="list">
+            <li>asdsa</li>
+            <li>asdsa</li>
+            <li>asdsa</li>
+            <li>asdsa</li>
+            <li>asdsa</li>
+            <li>asdsa</li>
+            <li>asdsa</li>
+        </ul>
     )
 }
 
-export default Sidebar
+export default sider

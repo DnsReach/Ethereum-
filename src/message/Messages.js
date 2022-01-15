@@ -32,30 +32,36 @@ const Message = () => {
 
     return (
         <>
-            {data.map((messages) => {
-                return (
-                    <>
-                        <p
-                            key={messages.id}
-                            style={{
-                                fontSize: '15px',
-                                color: 'yellow',
-                            }}
-                        >
-                            <HumanSex props={messages.get('username')} />
-                            {messages.get('username')}
+            <div
+                style={{
+                    marginTop: '100px',
+                }}
+            >
+                {data.map((messages) => {
+                    return (
+                        <>
                             <p
+                                key={messages.id}
                                 style={{
-                                    color: 'white',
-                                    marginBottom: '4em',
+                                    fontSize: '15px',
+                                    color: 'yellow',
                                 }}
                             >
-                                {messages.get('message')}
+                                <HumanSex props={messages.get('username')} />
+                                {messages.get('username')}
+                                <p
+                                    style={{
+                                        color: 'white',
+                                        marginBottom: '4em',
+                                    }}
+                                >
+                                    {messages.get('message')}
+                                </p>
                             </p>
-                        </p>
-                    </>
-                )
-            })}
+                        </>
+                    )
+                })}
+            </div>
             <SendMessage EndOfMessage={EndOfMessage} />
             <div ref={EndOfMessage}></div>
         </>
