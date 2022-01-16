@@ -8,12 +8,8 @@ const User = () => {
     return (
         <>
             <header className="welcome">
-                <p className="button-config">{balance.formatted}</p>
-                <h2
-                    style={{
-                        paddingLeft: '5em',
-                    }}
-                >
+                <h2 className="balance">{balance.formatted}</h2>
+                <h2 className="welcome-message">
                     WELCOME TO THE METAVERSE --- {user.get('username')}
                 </h2>
                 <button className="button-logout" onClick={() => logout()}>

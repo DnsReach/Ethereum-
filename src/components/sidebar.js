@@ -2,15 +2,11 @@ import '../css-setup/Sidebar.css'
 
 const sider = () => {
     return (
-        <ul className="list">
-            <li>asdsa</li>
-            <li>asdsa</li>
-            <li>asdsa</li>
-            <li>asdsa</li>
-            <li>asdsa</li>
-            <li>asdsa</li>
-            <li>asdsa</li>
-        </ul>
+        <div className="list">
+            <ul>
+                <li>we</li>
+            </ul>
+        </div>
     )
 }
 

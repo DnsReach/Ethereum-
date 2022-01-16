@@ -1,6 +1,9 @@
 import React, { useRef } from 'react'
 import SendMessage from './Send'
 import { useMoralisQuery, useMoralis } from 'react-moralis'
+import '../css-setup/Msg.css'
+
+import Sider from '../components/sidebar'
 
 const Message = () => {
     const EndOfMessage = useRef(null)
@@ -32,36 +35,31 @@ const Message = () => {
 
     return (
         <>
-            <div
-                style={{
-                    marginTop: '100px',
-                }}
-            >
-                {data.map((messages) => {
-                    return (
-                        <>
-                            <p
-                                key={messages.id}
-                                style={{
-                                    fontSize: '15px',
-                                    color: 'yellow',
-                                }}
-                            >
-                                <HumanSex props={messages.get('username')} />
-                                {messages.get('username')}
-                                <p
-                                    style={{
-                                        color: 'white',
-                                        marginBottom: '4em',
-                                    }}
-                                >
-                                    {messages.get('message')}
+            <section className="section-message">
+                <Sider />
+                <article>
+                    {data.map((messages) => {
+                        return (
+                            <>
+                                <p key={messages.id} className="message">
+                                    <HumanSex
+                                        props={messages.get('username')}
+                                    />
+                                    {messages.get('username')}
+                                    <p
+                                        style={{
+                                            color: 'white',
+                                            marginBottom: '4em',
+                                        }}
+                                    >
+                                        {messages.get('message')}
+                                    </p>
                                 </p>
-                            </p>
-                        </>
-                    )
-                })}
-            </div>
+                            </>
+                        )
+                    })}
+                </article>
+            </section>
             <SendMessage EndOfMessage={EndOfMessage} />
             <div ref={EndOfMessage}></div>
         </>
