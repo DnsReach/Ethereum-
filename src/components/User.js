@@ -1,10 +1,12 @@
 import React from 'react'
-import { useMoralis, useNativeBalance } from 'react-moralis'
+import { useMoralis, useMoralisQuery, useNativeBalance } from 'react-moralis'
 import '../css-setup/Welcome.css'
 
 const User = () => {
     const { user, logout } = useMoralis()
-    const { data: balance } = useNativeBalance()
+    const { data: balance } = useNativeBalance({
+        address: user.get('ethAdress'),
+    })
     return (
         <>
             <header className="welcome">

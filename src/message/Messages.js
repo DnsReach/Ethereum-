@@ -1,9 +1,8 @@
 import React, { useRef } from 'react'
 import SendMessage from './Send'
 import { useMoralisQuery, useMoralis } from 'react-moralis'
-import '../css-setup/Msg.css'
 
-import Sider from '../components/sidebar'
+import '../css-setup/Msg.css'
 
 const Message = () => {
     const EndOfMessage = useRef(null)
@@ -36,7 +35,6 @@ const Message = () => {
     return (
         <>
             <section className="section-message">
-                <Sider />
                 <article>
                     {data.map((messages) => {
                         return (

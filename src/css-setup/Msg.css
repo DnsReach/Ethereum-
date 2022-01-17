@@ -1,7 +1,6 @@
 .section-message {
     margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 30px;
 }
 
 .message {

@@ -3,7 +3,7 @@
     width: 250px;
     height: 45px;
     background: #fff;
-    padding-left: 20px;
+    margin-top: 5px;
 }
 .config-button {
     border-radius: 0 25px 25px 0;
@@ -14,12 +14,12 @@
 }
 
 #button-sidebar {
-    border-radius: 25px 25px 25px 25px;
     width: 150px;
     height: 50px;
-    background: transparent;
     color: white;
     cursor: pointer;
+    padding-top: 8px;
+    border-radius: 12px;
 }
 
 #logout {
@@ -29,7 +29,7 @@
     background: transparent;
     color: white;
     cursor: pointer;
-    margin-right: -130px;
+    margin-top: 5px;
 }
 
 .form-message {
@@ -52,14 +52,14 @@
 }
 
 #form-submit {
-    width: 1200px;
+    width: 97%;
     position: fixed;
     bottom: 0em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-left: 5px;
     margin-top: 20px;
+    padding-right: 20px;
+    background: url('https://cdn.wallpapersafari.com/81/13/0rCalk.jpg');
 }
 
 #button-submit {

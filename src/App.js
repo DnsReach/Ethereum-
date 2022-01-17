@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useMoralis } from 'react-moralis'
 import Signup from './components/signup'
-import Message from './message/Messages'
 import User from './components/User'
 import { createGlobalStyle } from 'styled-components'
+import Sider from './components/sidebar'
+import Setup from './setup'
 
 import './css-setup/App.css'
 
@@ -18,10 +20,20 @@ const App = () => {
     if (isAuthenticated) {
         return (
             <>
-                <User />
-                <nav className="component-container">
-                    <Message />
-                </nav>
+                <Router>
+                    <Routes>
+                        <Route path="/market" element={<Sider />}></Route>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <User />
+                                    <Setup />
+                                </>
+                            }
+                        ></Route>
+                    </Routes>
+                </Router>
             </>
         )
     }

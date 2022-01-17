@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis'
+import Image from '../logo/horizontal.png'
+
 import '../css-setup/Eth.css'
 
 const SendMessage = ({ EndOfMessage }) => {
     const { user, Moralis, logout, setUserData } = useMoralis()
     const [message, setMessages] = useState('')
-
     const GiveMessage = (ev) => {
         ev.preventDefault()
         if (!message) return
@@ -28,7 +29,14 @@ const SendMessage = ({ EndOfMessage }) => {
     return (
         <>
             <form id="form-submit" onSubmit={GiveMessage}>
-                <button id="button-sidebar">Sid</button>
+                <a href="/market" id="button-sidebar">
+                    <img
+                        style={{
+                            width: '100px',
+                        }}
+                        src={Image}
+                    />
+                </a>
                 <footer>
                     <input
                         className="input-message"
