@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useFetch from './useFetch'
 import { Detail } from './filtered'
-import Image from '../logo/horizontal.png'
+import Image from '../logo/ethereum.ico'
 import '../css-setup/Sidebar.css'
 
 const Sider = () => {
@@ -17,8 +17,7 @@ const Sider = () => {
                     <img
                         src={Image}
                         style={{
-                            width: '80px',
-                            height: '35px',
+                            height: '40px',
                         }}
                         alt="crypto"
                     />

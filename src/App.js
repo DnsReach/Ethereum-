@@ -1,20 +1,19 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useMoralis } from 'react-moralis'
-import Signup from './components/signup'
 import User from './components/User'
 import { createGlobalStyle } from 'styled-components'
 import Sider from './components/sidebar'
 import Setup from './setup'
-import './css-setup/App.css'
+import LoginSetup from './LoginSetup'
 
 const Global = createGlobalStyle`
 body{
-      background: url("https://cdn.wallpapersafari.com/81/13/0rCalk.jpg")
+      background: url("https://miro.medium.com/max/1400/1*Q126mgjvk0az7ZhxLznK9Q.png");
 } `
 
 const App = () => {
-    const { authenticate, isAuthenticated } = useMoralis()
+    const { isAuthenticated } = useMoralis()
 
     if (isAuthenticated) {
         return (
@@ -40,19 +39,7 @@ const App = () => {
     return (
         <>
             <Global />
-            <div className="App">
-                <h1
-                    style={{
-                        fontSize: 40,
-                    }}
-                >
-                    CONNECT TO THE METAVERSE
-                </h1>
-                <button className="button" onClick={() => authenticate()}>
-                    Click
-                </button>
-                <Signup />
-            </div>
+            <LoginSetup />
         </>
     )
 }

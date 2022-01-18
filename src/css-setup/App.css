@@ -4,32 +4,29 @@ body {
 }
 
 .App {
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     color: white;
-    margin: auto;
+    display: flex;
     justify-content: center;
-    padding-top: 50px;
-    width: 100%;
+    position: relative;
+    top: 210px;
 }
 
 .button {
-    margin-top: 20px;
-    margin-left: 5px;
     background-color: transparent;
     background-repeat: no-repeat;
     cursor: pointer;
     color: white;
-    width: 250px;
+    width: 220px;
     font-family: Cascadia Code;
     padding: 40px;
     border: 5px solid #15f4ee;
     text-transform: uppercase;
-    border-radius: 100px;
     transition: 1.5s;
+    text-align: center;
+    margin-left: 10px;
+    font-size: large;
+    height: 120px;
 }
 
 .button:hover {
