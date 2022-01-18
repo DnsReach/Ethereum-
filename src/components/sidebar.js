@@ -18,6 +18,7 @@ const Sider = () => {
                         src={Image}
                         style={{
                             height: '40px',
+                            marginLeft: '20px',
                         }}
                         alt="crypto"
                     />
