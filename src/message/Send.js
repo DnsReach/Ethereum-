@@ -5,7 +5,7 @@ import Image from '../logo/horizontal.png'
 import '../css-setup/Eth.css'
 
 const SendMessage = ({ EndOfMessage }) => {
-    const { user, Moralis, logout, setUserData } = useMoralis()
+    const { user, Moralis, setUserData } = useMoralis()
     const [message, setMessages] = useState('')
     const GiveMessage = (ev) => {
         ev.preventDefault()
@@ -35,6 +35,7 @@ const SendMessage = ({ EndOfMessage }) => {
                             width: '100px',
                         }}
                         src={Image}
+                        alt="logo"
                     />
                 </a>
                 <footer>

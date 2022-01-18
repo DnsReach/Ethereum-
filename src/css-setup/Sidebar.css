@@ -3,3 +3,33 @@
     width: 100px;
     border-style: solid;
 }
+
+.button-prev {
+    background: transparent;
+    color: white;
+    height: 35px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.button-next {
+    background: transparent;
+    color: white;
+    height: 35px;
+    width: 140px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+#header-crypto {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-crypto {
+    width: 300px;
+    height: 35px;
+    margin-left: 150px;
+    padding-right: 120px;
+    padding-left: 20px;
+}

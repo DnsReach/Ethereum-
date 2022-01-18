@@ -6,12 +6,11 @@ import User from './components/User'
 import { createGlobalStyle } from 'styled-components'
 import Sider from './components/sidebar'
 import Setup from './setup'
-
 import './css-setup/App.css'
 
 const Global = createGlobalStyle`
 body{
-      background:url("https://cdn.wallpapersafari.com/81/13/0rCalk.jpg")
+      background: url("https://cdn.wallpapersafari.com/81/13/0rCalk.jpg")
 } `
 
 const App = () => {

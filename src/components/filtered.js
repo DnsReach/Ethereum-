@@ -1,11 +1,34 @@
 import React from 'react'
+import { createGlobalStyle } from 'styled-components'
+import '../css-setup/crypto.css'
 
-export const Detail = (props) => {
-    const { id, name, image } = props
+const Create = createGlobalStyle`
+    body{ 
+        background-image: linear-gradient(45deg, rgb(149, 10, 155) 0%, rgb(149, 10, 155) 9%,rgb(120, 16, 136) 9%, rgb(120, 16, 136) 13%,rgb(178, 3, 174) 13%, rgb(178, 3, 174) 32%,rgb(91, 23, 117) 32%, rgb(91, 23, 117) 42%,rgb(32, 36, 79) 42%, rgb(32, 36, 79) 46%,rgb(61, 30, 98) 46%, rgb(61, 30, 98) 70%,rgb(3, 43, 60) 70%, rgb(3, 43, 60) 100%);
+        }
+        `
+
+export const Detail = ({
+    name,
+    image,
+    high_24h,
+    price_change_percentage_24h,
+}) => {
     return (
-        <ul>
-            <li style={{ color: 'white' }}>{name}</li>
-            <img style={{ width: '50px' }} src={image} />
-        </ul>
+        <>
+            <Create />
+            <section className="section-crypto">
+                <div>
+                    <img
+                        style={{ width: '40px' }}
+                        src={image}
+                        alt="imagecripto"
+                    />
+                </div>
+                <p>{name}</p>
+                <p>{high_24h}</p>
+                <p>{Math.ceil(price_change_percentage_24h)}%</p>
+            </section>
+        </>
     )
 }
