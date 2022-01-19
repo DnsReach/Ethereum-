@@ -8,3 +8,10 @@
     border-top: 4px;
     border-bottom-style: inset;
 }
+
+.time-color {
+    color: rgb(30, 206, 30);
+}
+.time-negative {
+    color: rgb(255, 74, 74);
+}

@@ -14,6 +14,15 @@ export const Detail = ({
     high_24h,
     price_change_percentage_24h,
 }) => {
+    const Count = () => {
+        const mat = Math.ceil(price_change_percentage_24h)
+        if (mat >= 0) {
+            return <p className="time-color">+{mat}</p>
+        } else {
+            return <p className="time-negative">{mat}</p>
+        }
+    }
+
     return (
         <>
             <Create />
@@ -27,7 +36,7 @@ export const Detail = ({
                 </div>
                 <p>{name}</p>
                 <p>{high_24h}</p>
-                <p>{Math.ceil(price_change_percentage_24h)}%</p>
+                <Count />
             </section>
         </>
     )
