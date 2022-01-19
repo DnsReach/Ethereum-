@@ -1,5 +1,4 @@
+![homepage](https://user-images.githubusercontent.com/80495650/150134902-da90c6b7-a58d-4875-a76c-9993f49c2510.png)
 
-![ether](https://user-images.githubusercontent.com/80495650/149197326-cc7c5699-9040-4fe5-9538-f1b7997458f0.png)
-
-
-![ether2](https://user-images.githubusercontent.com/80495650/149197966-f90fe053-2ba5-4209-b6c9-fdd9778947a1.png)
+![image](https://user-images.githubusercontent.com/80495650/150134926-84196d91-8a0d-4399-99ca-c66033a40965.png)
+![market](https://user-images.githubusercontent.com/80495650/150134939-b2a3cfc5-dccc-450e-952a-35d8a5e4d5ac.png)
