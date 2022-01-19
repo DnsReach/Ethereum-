@@ -24,17 +24,24 @@
 #header-crypto {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 #input-crypto {
-    width: 300px;
+    width: 340px;
     height: 35px;
     position: relative;
     left: 100px;
-    padding-right: 120px;
-    padding-left: 20px;
 }
 
 .link {
     color: white;
+}
+
+@media (max-width: 500px) {
+    #input-crypto {
+        width: 140px;
+        position: relative;
+        left: -5px;
+    }
 }

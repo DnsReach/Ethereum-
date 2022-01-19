@@ -5,6 +5,7 @@
     background: #fff;
     margin-top: 5px;
 }
+
 .config-button {
     border-radius: 0 25px 25px 0;
     width: 150px;
@@ -68,4 +69,19 @@
     height: 50px;
     background: transparent;
     color: white;
+}
+
+@media (max-width: 400px) {
+    .form-submit {
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-message {
+        width: 100px;
+    }
+    #button-submit {
+        width: 100px;
+    }
 }

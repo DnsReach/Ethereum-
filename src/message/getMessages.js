@@ -1,5 +1,6 @@
 import { useMoralis } from 'react-moralis'
 import React from 'react'
+import '../css-setup/GetMessage.css'
 
 const HumanSex = ({ props }) => {
     const { user } = useMoralis()
@@ -23,14 +24,7 @@ const GetMessages = ({ message }) => {
         <div>
             <HumanSex props={message.get('username')} />
             {message.get('username')}
-            <p
-                style={{
-                    color: 'white',
-                    marginBottom: '4em',
-                }}
-            >
-                {message.get('message')}
-            </p>
+            <p className="messages">{message.get('message')}</p>
         </div>
     )
 }
