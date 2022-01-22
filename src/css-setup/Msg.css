@@ -9,10 +9,3 @@
     text-align: center;
     margin: auto;
 }
-
-@media (max-width: 600px) {
-    .section-message {
-        position: relative;
-        top: 70px;
-    }
-}
