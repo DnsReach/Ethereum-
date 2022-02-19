@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis'
 import Image from '../logo/horizontal.png'
-
 import '../css-setup/Eth.css'
 
 const SendMessage = ({ EndOfMessage }) => {
@@ -25,7 +24,6 @@ const SendMessage = ({ EndOfMessage }) => {
             behavior: 'smooth',
         })
     }
-
     return (
         <>
             <form id="form-submit" onSubmit={GiveMessage}>

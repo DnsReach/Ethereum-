@@ -28,10 +28,11 @@
 
 .balance {
     margin: 20px;
-    width: 100px;
-    background: transparent;
-    color: white;
-    cursor: pointer;
+    /* width: 100px; */
+    /* background: transparent; */
+    /* color: white; */
+    /* cursor: pointer; */
+    /* margin: auto; */
 }
 
 .welcome-message {

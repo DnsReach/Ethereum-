@@ -22,4 +22,5 @@ const LoginSetup = () => {
         </div>
     )
 }
+
 export default LoginSetup
