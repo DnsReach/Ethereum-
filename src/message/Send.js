@@ -24,39 +24,44 @@ const SendMessage = ({ EndOfMessage }) => {
             behavior: 'smooth',
         })
     }
+
     return (
         <>
-            <form id="form-submit" onSubmit={GiveMessage}>
-                <a href="/market" id="button-sidebar">
-                    <img
-                        style={{
-                            width: '100px',
-                        }}
-                        src={Image}
-                        alt="logo"
-                    />
-                </a>
-                <footer>
-                    <input
-                        className="input-message"
-                        value={message}
-                        onChange={(evento) => setMessages(evento.target.value)}
-                    />
-                    <button id="button-submit" type="submit">
-                        SEND
+            <footer>
+                <form id="form-submit" onSubmit={GiveMessage}>
+                    <a href="/market" id="button-sidebar">
+                        <img
+                            style={{
+                                width: '100px',
+                            }}
+                            src={Image}
+                            alt="logo"
+                        />
+                    </a>
+                    <div>
+                        <input
+                            className="input-message"
+                            value={message}
+                            onChange={(evento) =>
+                                setMessages(evento.target.value)
+                            }
+                        />
+                        <button id="button-submit" type="submit">
+                            SEND
+                        </button>
+                    </div>
+                    <button
+                        id="logout"
+                        onClick={() =>
+                            setUserData({
+                                username: window.prompt(),
+                            })
+                        }
+                    >
+                        User
                     </button>
-                </footer>
-                <button
-                    id="logout"
-                    onClick={() =>
-                        setUserData({
-                            username: window.prompt(),
-                        })
-                    }
-                >
-                    User
-                </button>
-            </form>
+                </form>
+            </footer>
         </>
     )
 }

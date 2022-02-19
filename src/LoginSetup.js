@@ -6,7 +6,7 @@ import './css-setup/App.css'
 const LoginSetup = () => {
     const { authenticate } = useMoralis()
     return (
-        <div className="App">
+        <main className="App">
             <button className="button" onClick={() => authenticate()}>
                 <img
                     src={Image}
@@ -19,7 +19,7 @@ const LoginSetup = () => {
                     alt="logo"
                 />
             </button>
-        </div>
+        </main>
     )
 }
 

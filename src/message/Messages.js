@@ -18,18 +18,13 @@ const Message = () => {
     return (
         <>
             <section className="section-message">
-                <article>
-                    {data.map((messages) => {
-                        return (
-                            <>
-                                <GetMessages
-                                    message={messages}
-                                    key={messages.id}
-                                />
-                            </>
-                        )
-                    })}
-                </article>
+                {data.map((messages) => {
+                    return (
+                        <>
+                            <GetMessages message={messages} key={messages.id} />
+                        </>
+                    )
+                })}
             </section>
             <SendMessage EndOfMessage={EndOfMessage} />
             <div ref={EndOfMessage}></div>

@@ -21,11 +21,11 @@ const HumanSex = ({ props }) => {
 
 const GetMessages = ({ message }) => {
     return (
-        <div>
+        <main>
             <HumanSex props={message.get('username')} />
             {message.get('username')}
             <p className="messages">{message.get('message')}</p>
-        </div>
+        </main>
     )
 }
 
