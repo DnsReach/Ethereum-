@@ -1,5 +1,5 @@
 import React from 'react'
-import { useMoralis, useNativeBalance } from 'react-moralis'
+import { useMoralis } from 'react-moralis'
 import '../css-setup/Welcome.css'
 
 const User = () => {
@@ -16,6 +16,7 @@ const User = () => {
                             style={{
                                 position: 'relative',
                             }}
+                            alt="nft"
                         />
                     </a>
                 </h2>
